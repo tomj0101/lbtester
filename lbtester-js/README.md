@@ -4,6 +4,7 @@ Docker images for Test load balancer (nodejs + express)
 #### Local Run (dev)
 ```
 npm install
+export APP_VERSION="v.0.1-local"
 node app.js
 open http://localhost:8888/v3/ui
 open http://localhost:8888/v3/app

@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 const port = 8888;
 
-const sys_info = {"hostname": os.hostname()};
+const sys_info = {"hostname": os.hostname(), "version": process.env.APP_VERSION};
 
 app.use(cors());
 
