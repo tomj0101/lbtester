@@ -6,7 +6,7 @@ metadata:
   labels:
     app: lbtester
 spec:
-  replicas: 50
+  replicas: 10
   selector:
     matchLabels:
       app: lbtester
@@ -18,7 +18,10 @@ spec:
       containers:
       - name: lbtester
         image: tomj0101/lbtester:lasted
-        # Changing from imagePullPolicy: Never to Always for local k8s LABs         
-        imagePullPolicy: Always
+        # Changing from imagePullPolicy: Never to Always for local k8s LABs.       
+        imagePullPolicy: Never
+        env:
+        - name: APP_VERSION
+          value: "v1.0.1"
         ports:
         - containerPort: 8888
