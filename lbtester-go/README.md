@@ -1,4 +1,4 @@
-# lbtester_go (BETA)
+# lbtester-go (BETA)
 #### Build 101 in 1min
 ```
 1 - Setting Up and Running the Go Binary
