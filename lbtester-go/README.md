@@ -15,10 +15,10 @@ go: to add module requirements and sums:
         go mod tidy
 
 3 -  Building Go Binaries
-go build
+go build -o bin/
 
 Optimize the binary size, you can omit the symbol table, debug information and the DWARF symbol table by passing -s and -w to the Go linker
-go build -ldflags="-s -w" -o lbtester_go main.go
+go build -ldflags="-s -w" -o bin/ main.go
 
 4- Run the binary
 ./lbtester
