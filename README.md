@@ -103,13 +103,13 @@ curl http://10.109.94.186:4444/v3/app
 
 ### Health endpoint
 ```
-$ curl http://10.109.34.224:4444/v3/health
+$ curl http://10.109.94.186:4444/v3/health
 
 OR 
 
 sudo apt install jq
 
-$ curl http://10.109.34.224:4444/v3/health | jq
+$ curl http://10.109.94.186:4444/v3/health | jq
 {
   "cpu": [
     {
