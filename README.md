@@ -99,3 +99,46 @@ curl http://10.109.94.186:4444/v3/app
 curl http://10.109.94.186:4444/v3/app
 {"hostname":"lbtester-deployment-66798999d9-cj7hk"}
 ```
+
+
+### Health endpoint
+```
+$ curl http://10.109.34.224:4444/v3/health
+
+OR 
+
+sudo apt install jq
+
+$ curl http://10.109.34.224:4444/v3/health | jq
+{
+  "cpu": [
+    {
+      "model": "CPU Core 1 model",
+      "speed": 2600,
+      "times": {
+        "user": 123NNN,
+        "nice": 123NNN,
+        "sys": 123NNN,
+        "idle": 123NNN,
+        "irq": 0
+      }
+    },
+    {
+      "model": "CPU Core 2 model",
+      "speed": 123NNN,
+      "times": {
+        "user": 123NNN,
+        "nice": 123NNN,
+        "sys": 123NNN,
+        "idle": 123NNN,
+        "irq": 0
+      }
+    }
+  ],
+  "total_memory": "8 GB",
+  "free_memory": "5 GB",
+  "hostname": "lbtester-deployment-557d86f9f-t7sdb",
+  "status": "UP"
+}
+
+```
