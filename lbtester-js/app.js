@@ -35,7 +35,7 @@ function humaFormaBytes(t_size){
  */
 
 const sys_info = {"hostname": os.hostname(), "version": process.env.APP_VERSION};
-const health = {"cpu": os.cpus(), "total_memory": humaFormaBytes(os.totalmem()), "free_memory": humaFormaBytes(os.freemem()),"status":"UP"};
+const health = {"cpu": os.cpus(), "total_memory": humaFormaBytes(os.totalmem()), "free_memory": humaFormaBytes(os.freemem()),"hostname": os.hostname(),"status":"UP"};
 
 /**
  * REST API/endpoint

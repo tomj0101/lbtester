@@ -5,7 +5,11 @@ Docker images for Test load balancer
 #### Push to your Private or Public containers register (DevOps)
 Docker Hub (docker.io)
 ```
+cd lbtester-js
 docker build -t tomj0101/lbtester:lasted -f Dockerfile.lbtester .
+
+docker run -p 8888:8888 tomj0101/lbtester:lasted
+
 Create repo on dockerhub > https://hub.docker.com/repository
 
 docker images
@@ -20,6 +24,12 @@ docker push tomj0101/lbtester:lasted
 
 #### Local Deploy in Kubernetes (MiniKube)
 ```
+$ minikube start
+$ minikube dashboard
+
+open communication between your localhost and minikube cluster
+# minikube tunnel
+
 kubectl apply -f lbtester-deployment.yaml
 kubectl delete -f lbtester-deployment.yaml
 
@@ -56,6 +66,10 @@ minikube cache delete tomj0101/lbtester
 
 load images from local to minikube
 minikube image load tomj0101/lbtester:lasted
+
+
+
+
 ```
 
 
